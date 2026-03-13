@@ -87,7 +87,7 @@
             #endregion
 
             #region Q3:
-            /*
+            /* 
              * a) Can you write: Appliance a = new Appliance("LG"); ? Why or why not?
              * 
              * No, you cannot.
