@@ -135,7 +135,7 @@
             #endregion
 
             #region Q4:
-            /*
+            /* 
              * a) What is a partial class? Why would a developer split Calculator into two files?
              * 
              * Partial Class: A feature that allows a single class to be defined across 
