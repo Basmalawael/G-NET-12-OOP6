@@ -45,7 +45,7 @@
 
             #region Q2: 
 
-            /*Q2 : What is the difference between an abstract class and an interface? 
+            /* What is the difference between an abstract class and an interface? 
              * Give at least four differences. 
              * When would you choose one over the other?
              * 
