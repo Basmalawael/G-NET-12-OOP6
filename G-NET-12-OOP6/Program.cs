@@ -1,4 +1,6 @@
-﻿namespace G_NET_12_OOP6
+﻿using G_NET_12_OOP6.NewFolder;
+
+namespace G_NET_12_OOP6
 {
     internal class Program
     {
@@ -193,24 +195,101 @@
              * 
             */
             #endregion
+            #endregion
+
+
+            #region Part 02 : Practical (Extending the Movie Ticket Booking System)
+            /*
+            Console.WriteLine("=== Cinema Opened  ===");
+            Console.WriteLine(" Projector ON\n");
+            Console.WriteLine("// Ticket t = new Ticket( Test, 100) ;// ERROR: Cannot create instance of abstract type 'Ticket' ");
+            Console.WriteLine();
+
+            // a. إنشاء تذاكر بأنواع مختلفة
+            Cinema C = new Cinema();
+            StandardTicket s1 = new StandardTicket(101, "Inception", "A5", 80);
+            VIPTicket v1 = new VIPTicket(102, "Avengers", 200, true, 50);
+            IMAXTicket i1 = new IMAXTicket(103, "Dune", 130, true);
+
+            // c. إنشاء السينما وإضافة التذاكر (Partial Class)
+
+            C.AddTicket(s1);
+            C.AddTicket(v1);
+            C.AddTicket(i1);
+
+            // حجز التذاكر
+            C.BookTicket(101);
+            C.BookTicket(102);
+            C.BookTicket(103);
 
 
 
 
+            // d. طباعة كل التذاكر (Reporting Partial File)
+            C.PrintAllTicket();
 
+            // . عرض الـ Polymorphism(نادينا CalculateFinalPrice لكل نوع)
+            Console.WriteLine("\n --- Polymorphism: Final Price per Ticket ---");
+            Console.WriteLine($" StandardTicket => Final Price: {s1.CalculateFinalPrice():F2}");
+            Console.WriteLine($" VIPTicket      => Final Price: {v1.CalculateFinalPrice():F2}");
+            Console.WriteLine($" IMAXTicket     => Final Price: {i1.CalculateFinalPrice():F2}");
 
+            //  e. استخدام الـ Extension Method لطباعة إيصال
+            Console.WriteLine("\n--- Extension Method: Receipt ---");
+            Console.WriteLine(v1.ToReceipt());
 
+            // استخدام الـ Extension Method: TotalRevenue
+            Console.WriteLine("\n --- Extension Method: Total Revenue");
+            C.ShowStatistics();
 
+            Console.WriteLine("\n Projector OFF");
+            Console.WriteLine("\n=== Cinema Closed ===");
 
-
-
-
-
-
+        
+        */
             #endregion
 
 
 
         }
     }
+
+
+    #region TicketExtensions
+    /*
+    public static class TicketExtensions
+    {
+        public static string ToReceipt(this Ticket ticket)
+        {
+            return $@"
+========== RECEIPT ==========
+Movie     : {ticket.MovieName}
+Type      : {ticket.GetType().Name}
+Price     : {ticket.Price}
+Final     : {ticket.CalculateFinalPrice():F2}
+Status    : {(ticket.IsBooked ? "Booked" : "Not Booked")}
+==============================";
+        }
+        public static decimal TotalRevenue(this List<Ticket> ticketlist)
+        {
+            decimal total = 0;
+            foreach (var t in ticketlist)
+            {
+                if (t.IsBooked)
+                {
+                    total += t.CalculateFinalPrice();
+
+                }
+            }
+
+            return total;
+
+        }
+    }
+    */
+        #endregion
+
+    
 }
+
+
