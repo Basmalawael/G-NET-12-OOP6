@@ -199,7 +199,7 @@ namespace G_NET_12_OOP6
 
 
             #region Part 02 : Practical (Extending the Movie Ticket Booking System)
-            /*
+            /* 
             Console.WriteLine("=== Cinema Opened  ===");
             Console.WriteLine(" Projector ON\n");
             Console.WriteLine("// Ticket t = new Ticket( Test, 100) ;// ERROR: Cannot create instance of abstract type 'Ticket' ");
